@@ -2,7 +2,7 @@
 Resource  ../resources/keywords.robot
 
 *** Variables ***
-${BROWSER}      Firefox 
+${BROWSER}      headlessfirefox 
 
 *** Test Cases ***
 

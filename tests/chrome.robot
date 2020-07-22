@@ -2,7 +2,7 @@
 Resource  ../resources/keywords.robot
 
 *** Variables ***
-${BROWSER}      chrome 
+${BROWSER}      headlesschrome
 
 *** Test Cases ***
 
