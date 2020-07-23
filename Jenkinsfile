@@ -63,8 +63,8 @@ pipeline {
                 }
 
                 stage('Test On Windows -> Firefox') {
-                    when {
-                        expression { return env.JOB_NAME.contains('master') }
+                    when {branch 'master'
+                        //expression { return env.JOB_NAME.contains('master') }
                     }
                     agent {
                         label "windows && firefox"
@@ -76,8 +76,8 @@ pipeline {
                 }
 
                 stage('Test On Linux & Firefox') {
-                    when {
-                        expression { return env.JOB_NAME.contains('master') }
+                    when {branch 'master'
+                        //expression { return env.JOB_NAME.contains('master') }
                     }
                     agent {
                         label "linux && firefox"
