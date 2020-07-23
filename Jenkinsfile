@@ -64,8 +64,9 @@ pipeline {
 
                 stage('Test On Windows -> Firefox') {
                     when {
-                        beforeAgent true
                         branch 'master'
+                        beforeAgent true
+
                     }
                     agent {
                         label "windows && firefox"
@@ -78,8 +79,9 @@ pipeline {
 
                 stage('Test On Linux & Firefox') {
                     when {
-                        beforeAgent true
                         branch 'master'
+                        beforeAgent true
+
                     }
                     agent {
                         label "linux && firefox"
