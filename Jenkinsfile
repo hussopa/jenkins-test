@@ -78,8 +78,6 @@ pipeline {
                 stage('Test On Linux & Firefox') {
                     when {
                         expression { return env.JOB_NAME.contains('master') }
-                        beforeAgent true
-
                     }
                     agent {
                         label "linux && firefox"
