@@ -10,6 +10,6 @@ App Main page
     [Documentation]  Check Main page
     [Tags]  MainPage
     Open Browser To Main Page
-    Sleep  24
+    Sleep  25
     [Teardown]     Close Browser
 
