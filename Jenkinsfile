@@ -62,11 +62,11 @@ pipeline {
                     }
                 }
 
-                when {
-                    beforeAgent true
-                    branch 'master'
-                }
                 stage('Test On Windows -> Firefox') {
+                    when {
+                        beforeAgent true
+                        branch 'master'
+                    }
                     agent {
                         label "windows && firefox"
                     }
@@ -76,11 +76,11 @@ pipeline {
                     }
                 }
 
-                when {
-                    beforeAgent true
-                    branch 'master'
-                }
                 stage('Test On Linux & Firefox') {
+                    when {
+                        beforeAgent true
+                        branch 'master'
+                    }
                     agent {
                         label "linux && firefox"
                     }
