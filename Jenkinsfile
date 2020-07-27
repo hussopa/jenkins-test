@@ -2,6 +2,7 @@ pipeline {
     agent none
     stages {
         stage('SCM') {
+            
             parallel {
                 stage('Clone to Linux') {
                     agent {
