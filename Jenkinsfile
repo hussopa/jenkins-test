@@ -2,6 +2,7 @@ pipeline {
     agent none
     stages {
         stage('SCM') {
+
             parallel {
                 stage('Clone to Linux') {
                     agent {
@@ -63,8 +64,8 @@ pipeline {
                 }
 
                 stage('Test On Windows -> Firefox') {
-                    when {branch 'master'
-                        //expression { return env.JOB_NAME.contains('master') }
+                    when {
+                        expression { return env.JOB_NAME.contains('_master/') }
                     }
                     agent {
                         label "windows && firefox"
@@ -76,8 +77,8 @@ pipeline {
                 }
 
                 stage('Test On Linux & Firefox') {
-                    when {branch 'master'
-                        //expression { return env.JOB_NAME.contains('master') }
+                    when {
+                        expression { return env.JOB_NAME.contains('_master/') }
                     }
                     agent {
                         label "linux && firefox"
